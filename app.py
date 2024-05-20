@@ -147,7 +147,7 @@ history_aware_retriever = create_history_aware_retriever(
 ### Main chain for chat with history
 qa_system_prompt = """
     You are a helpful AI assistant and an expert at Medicare laws in the US. You're tasked to answer the question given below, \
-    but only based on the context provided. If you cannot find an answer ask the user to rephrase the question. Use three sentences \
+    but only based on the context provided. If you cannot find an answer ask the user to rephrase the question. Use five sentences \
     maximum and keep the answer concise.
 
     Examples:
