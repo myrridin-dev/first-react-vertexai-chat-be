@@ -180,11 +180,10 @@ store = {}
 
 rag_chain_with_history = RunnableWithMessageHistory(
     rag_chain,
-    # lambda session_id: msgs,            # This is a function that returns history given a session_id
-    get_chat_history_by_session_id,
-    input_messages_key="input",           # This is the key to be treated as the latest input message
-    output_messages_key="answer",         # This is what the response key in the vertexai response is
-    history_messages_key=CHAT_HISTORY_KEY,# This is the key to add historical messages (input, answer) to
+    get_chat_history_by_session_id,         # This is a function that returns history given a session_id
+    input_messages_key="input",             # This is the key to be treated as the latest input message
+    output_messages_key="answer",           # This is what the response key in the vertexai response is
+    history_messages_key=CHAT_HISTORY_KEY,  # This is the key to add historical messages (input, answer) to
 )
 
 # Flask section
